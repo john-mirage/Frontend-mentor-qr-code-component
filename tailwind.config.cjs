@@ -13,7 +13,11 @@ module.exports = {
       "2xl": "1400px",
     },
     colors: {
-      transparent: "transparent",
+      "white": "hsl(0, 0%, 100%)",
+      "light-gray": "hsl(212, 45%, 89%)",
+      "grayish-blue": "hsl(220, 15%, 55%)",
+      "dark-blue": "hsl(218, 44%, 22%)",
+      "transparent": "transparent",
     },
     spacing: {
       "0": "0px",
@@ -50,16 +54,12 @@ module.exports = {
       "1024": "64rem",
     },
     fontWeight: {
-      "300": "300",
       "400": "400",
-      "500": "500",
-      "600": "600",
       "700": "700",
-      "800": "800",
     },
     extend: {
       fontFamily: {
-        sans: ["font name", ...defaultTheme.fontFamily.sans],
+        sans: ["Outfit", ...defaultTheme.fontFamily.sans],
       },
     },
   },
