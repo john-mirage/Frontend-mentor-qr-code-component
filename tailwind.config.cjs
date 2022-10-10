@@ -53,9 +53,24 @@ module.exports = {
       "512": "32rem",
       "1024": "64rem",
     },
-    fontWeight: {
-      "400": "400",
-      "700": "700",
+    fontSize: {
+      "22": ["1.375rem", {
+        lineHeight: "1.75rem",
+        letterSpacing: "0.01875rem",
+        fontWeight: "700",
+      }],
+      "15": ["0.9375rem", {
+        lineHeight: "1.1875rem",
+        letterSpacing: "0.0125rem",
+        fontWeight: "400",
+      }],
+    },
+    maxWidth: {
+      "320": "20rem",
+    },
+    borderRadius: {
+      "10": "0.625rem",
+      "20": "1.25rem",
     },
     extend: {
       fontFamily: {
@@ -63,5 +78,10 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  corePlugins: {
+    aspectRatio: false,
+  },
+  plugins: [
+    require("@tailwindcss/aspect-ratio"),
+  ],
 };
