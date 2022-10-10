@@ -1,8 +1,18 @@
 import { describe, expect, it } from "vitest";
 import { render, screen } from "@utils/test-utils";
 import Card from "./component";
+import qrCodeImage from "@images/qr-code.png";
 
-describe("App component", () => {
+describe("Card component", () => {
+  it("should display the card qr code image", () => {
+    render(<Card />);
+    const image = screen.getByAltText(
+      /Qr code of the Frontend mentor website/i
+    );
+    expect(image).toBeInTheDocument();
+    expect(image).toHaveAttribute("src", qrCodeImage);
+  });
+
   it("should display the card title", () => {
     render(<Card />);
     expect(

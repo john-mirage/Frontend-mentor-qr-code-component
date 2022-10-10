@@ -8,7 +8,7 @@ const Card: FunctionComponent = () => {
         <img
           className="w-full object-cover object-center"
           src={qrCodeImage}
-          alt="Qr code"
+          alt="Qr code of the Frontend mentor website"
           draggable="false"
         />
       </div>
