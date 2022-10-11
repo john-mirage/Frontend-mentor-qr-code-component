@@ -4,7 +4,16 @@ import Card from "./Card";
 import qrCodeImage from "@images/qr-code.png";
 
 describe("Card component", () => {
-  it("should display the card qr code image", () => {
+  it("should display the card link", () => {
+    render(<Card />);
+    const link = screen.getByRole("link", {
+      name: /Go to the Frontend mentor website/i,
+    });
+    expect(link).toBeInTheDocument();
+    expect(link).toHaveAttribute("href", "https://www.frontendmentor.io");
+  });
+
+  it("should display the card image", () => {
     render(<Card />);
     const image = screen.getByAltText(
       /Qr code of the Frontend mentor website/i
