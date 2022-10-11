@@ -3,7 +3,7 @@ import qrCodeImage from "@images/qr-code.png";
 
 const Card: FunctionComponent = () => {
   return (
-    <main className="w-full max-w-320 overflow-hidden rounded-20 bg-white px-16 pt-16 pb-40 text-center shadow-2xl">
+    <main className="w-full max-w-320 overflow-hidden rounded-20 bg-white px-16 pt-16 pb-40 text-center shadow-2xl shadow-dark-blue/20">
       <div className="aspect-w-1 aspect-h-1 mb-24 overflow-hidden rounded-10">
         <img
           className="w-full object-cover object-center"
