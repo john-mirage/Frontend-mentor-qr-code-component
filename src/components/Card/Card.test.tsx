@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { render, screen } from "@utils/test-utils";
-import Card from "./component";
+import Card from "./Card";
 import qrCodeImage from "@images/qr-code.png";
 
 describe("Card component", () => {

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import App from "./component";
+import App from "./App";
 import { render, screen } from "@utils/test-utils";
 
 describe("App component", () => {
