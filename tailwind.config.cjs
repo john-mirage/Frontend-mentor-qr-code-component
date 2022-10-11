@@ -22,12 +22,12 @@ module.exports = {
       "48": "3rem",
     },
     fontSize: {
-      "22": ["1.375rem", {
+      "heading": ["1.375rem", {
         lineHeight: "1.75rem",
         letterSpacing: "0.01875rem",
         fontWeight: "700",
       }],
-      "15": ["0.9375rem", {
+      "body": ["0.9375rem", {
         lineHeight: "1.1875rem",
         letterSpacing: "0.0125rem",
         fontWeight: "400",
@@ -39,10 +39,6 @@ module.exports = {
     borderRadius: {
       "10": "0.625rem",
       "20": "1.25rem",
-    },
-    boxShadow: {
-      "card": "0 0 0 0 hsl(216 95% 57% / 0.5)",
-      "card-hover": "0 0 0 0.5rem hsl(216 95% 57% / 0.25)",
     },
     extend: {
       fontFamily: {
