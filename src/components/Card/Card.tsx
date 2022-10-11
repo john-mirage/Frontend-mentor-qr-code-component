@@ -1,7 +1,26 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, useEffect, useRef, useState } from "react";
 import qrCodeImage from "@images/qr-code.png";
+import { clsx } from "clsx";
 
 const Card: FunctionComponent = () => {
+  const [visible, setVisible] = useState(false);
+  const imageRef = useRef<HTMLImageElement>(null);
+
+  useEffect(() => {
+    if (!imageRef.current) return;
+    if (imageRef.current.complete) return;
+    let current = true;
+    imageRef.current.addEventListener("load", () => {
+      if (!imageRef.current || !current) return;
+      setTimeout(() => {
+        setVisible(true);
+      }, 0);
+    });
+    return () => {
+      current = false;
+    };
+  }, []);
+
   return (
     <div className="w-full max-w-320 overflow-hidden rounded-20 bg-white px-16 pt-16 pb-40 text-center shadow-2xl shadow-dark-blue/20">
       <a
@@ -10,7 +29,11 @@ const Card: FunctionComponent = () => {
         aria-label="Go to the Frontend mentor website"
       >
         <img
-          className="object-cover object-center motion-safe:transition-transform hover-device:group-hover:scale-105"
+          ref={imageRef}
+          className={clsx(
+            "object-cover object-center motion-safe:transition-transform-and-opacity hover-device:group-hover:scale-110",
+            { "opacity-0": !visible }
+          )}
           src={qrCodeImage}
           alt="Qr code of the Frontend mentor website"
           draggable="false"

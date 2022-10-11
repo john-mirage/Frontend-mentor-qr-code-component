@@ -44,6 +44,9 @@ module.exports = {
       fontFamily: {
         sans: ["Outfit", ...defaultTheme.fontFamily.sans],
       },
+      transitionProperty: {
+        "transform-and-opacity": "transform, opacity",
+      },
     },
   },
   corePlugins: {
