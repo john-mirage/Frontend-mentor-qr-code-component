@@ -22,10 +22,11 @@ const Card: FunctionComponent = () => {
   }, []);
 
   return (
-    <div className="w-full max-w-320 overflow-hidden rounded-20 bg-white px-16 pt-16 pb-40 text-center shadow-2xl shadow-dark-blue/20">
+    <article className="w-full max-w-320 overflow-hidden rounded-20 bg-white px-16 pt-16 pb-40 text-center shadow-2xl shadow-dark-blue/20 print:rounded-0 print:bg-transparent print:shadow-none">
       <a
-        className="group aspect-w-1 aspect-h-1 mb-24 block overflow-hidden rounded-10 bg-blue outline-none focus-visible:ring-8 focus-visible:ring-blue/30 motion-safe:transition-shadow"
+        className="group aspect-w-1 aspect-h-1 mb-24 block overflow-hidden rounded-10 bg-blue outline-none focus-visible:ring-8 focus-visible:ring-blue/30 motion-safe:transition-shadow print:rounded-0"
         href="https://www.frontendmentor.io"
+        target="_blank"
         aria-label="Go to the Frontend mentor website"
       >
         <img
@@ -39,14 +40,14 @@ const Card: FunctionComponent = () => {
           draggable="false"
         />
       </a>
-      <h2 className="mb-16 text-heading text-dark-blue">
+      <h2 className="mb-16 text-heading text-dark-blue print:text-black">
         Improve your front-end skills by building projects
       </h2>
-      <p className="px-8 text-body text-grayish-blue contrast-more:text-dark-blue">
+      <p className="px-8 text-body text-grayish-blue contrast-more:text-dark-blue print:text-black">
         Scan the QR code to visit Frontend Mentor and take your coding skills to
         the next level
       </p>
-    </div>
+    </article>
   );
 };
 
