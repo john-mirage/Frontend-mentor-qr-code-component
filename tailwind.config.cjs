@@ -48,8 +48,11 @@ module.exports = {
         sans: ["Outfit", ...defaultTheme.fontFamily.sans],
       },
       transitionProperty: {
-        "transform-and-opacity": "transform, opacity",
+        "image": "transform, opacity",
       },
+      transitionDuration: {
+        "image": "150ms, 600ms",
+      }
     },
   },
   corePlugins: {

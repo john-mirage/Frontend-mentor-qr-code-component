@@ -32,7 +32,7 @@ const Card: FunctionComponent = () => {
         <img
           ref={imageRef}
           className={clsx(
-            "object-cover object-center motion-safe:transition-transform-and-opacity hover-device:group-hover:scale-110",
+            "object-cover object-center motion-safe:transition-image motion-safe:duration-image hover-device:group-hover:scale-110",
             { "opacity-0": !visible }
           )}
           src={qrCodeImage}
